@@ -1,18 +1,24 @@
-import Progresstracker from "./Components/Progresstracker"
-import TaskForm from "./Components/TaskForm"
-import TaskList from "./Components/TaskList"
+import React, { useState } from 'react'
+import TaskForm from './Components/TaskForm'
+import TaskList from './Components/TaskList'
+import Progresstracker from './Components/Progresstracker'
 
-function App() {
+export default function App() {
+  const[tasks, setTasks] = useState([]);
+
+  const addTask = (task) => {
+    setTasks(task);
+  }
   return (
-    <>
-    <h1>Task Focus</h1>
-    <p>Our friendly task manager</p>
-    <TaskForm />
-    <TaskList />
-    <Progresstracker />
-    <button>Clear Tasks</button>
-    </>
+    <div>
+      <header>
+        <h1>Taskman</h1>
+        <p><b>Your friendly Task Manager</b></p>
+      </header>
+      <TaskForm />
+      <TaskList />
+      <Progresstracker />
+      <button>Clear Tasks</button>
+    </div>
   )
 }
-
-export default App

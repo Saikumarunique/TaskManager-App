@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-export default function Progresstracker() {
-  return (
-    <div>
-      <h1>ProgressTracker</h1>
-    </div>
-  )
+export default class Progresstracker extends Component {
+  render() {
+    return (
+      <div>
+            <h1>PorgressTracker</h1>
+      </div>
+    )
+  }
 }
